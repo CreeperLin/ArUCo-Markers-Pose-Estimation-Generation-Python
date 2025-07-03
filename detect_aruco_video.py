@@ -19,7 +19,7 @@ ap.add_argument("-t", "--type", type=str, default="DICT_ARUCO_ORIGINAL", help="T
 args = vars(ap.parse_args())
 
 if args["camera"].lower() == "true":
-	video = cv2.VideoCapture(0)
+	video = cv2.VideoCapture(int(args['video']))
 	time.sleep(2.0)
 	
 else:
